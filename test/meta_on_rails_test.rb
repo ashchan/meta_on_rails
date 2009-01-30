@@ -8,7 +8,7 @@ class MetaOnRailsTest < Test::Unit::TestCase
   
   def test_should_have_default_values
     output = display_meta(:keywords => 'default')
-    assert output.include?("<meta name=\"keywords\" content=\"default\"")
+    assert output.include?('<meta name="keywords" content="default"')
   end
   
   def test_should_strip_html
@@ -31,5 +31,9 @@ class MetaOnRailsTest < Test::Unit::TestCase
 
   def test_does_not_display_blank_values
     assert_equal display_meta(:keywords => '   '),''
+  end
+
+  def test_removes_double_quotes
+    assert display_meta(:keywords => '""') =~ %r[content="''"/>]
   end
 end
