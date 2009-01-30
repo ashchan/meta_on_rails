@@ -1,4 +1,6 @@
 require 'test/unit'
+require 'rubygems'
+require 'activesupport'
 require File.dirname(__FILE__) + '/../lib/meta_on_rails'
 
 class MetaOnRailsTest < Test::Unit::TestCase
@@ -20,5 +22,14 @@ class MetaOnRailsTest < Test::Unit::TestCase
     set_meta(:keywords => 'override')
     output = display_meta(:keywords => 'default')
     assert output.include?('override')
+  end
+
+  def test_should_not_set_meta_when_displaying
+    display_meta(:keywords => 'default')
+    assert !display_meta(:something => 'else').include?('default')
+  end
+
+  def test_does_not_display_blank_values
+    assert_equal display_meta(:keywords => '   '),''
   end
 end
