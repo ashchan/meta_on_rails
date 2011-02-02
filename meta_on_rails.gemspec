@@ -16,23 +16,32 @@ Gem::Specification.new do |s|
     "README.markdown"
   ]
   s.files = [
+    "Gemfile",
+    "Gemfile.lock",
     "MIT-LICENSE",
     "README.markdown",
     "Rakefile",
-    "lib/meta_on_rails.rb"
+    "VERSION",
+    "lib/meta_on_rails.rb",
+    "lib/meta_on_rails/railtie.rb",
+    "lib/meta_on_rails/view_helpers.rb",
+    "meta_on_rails.gemspec",
+    "spec/meta_on_rails_spec.rb",
+    "spec/spec_helper.rb",
+    "test/meta_on_rails_test.rb"
   ]
   s.homepage = %q{https://github.com/ashchan/meta_on_rails}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.5.0}
   s.summary = %q{MetaOnRails DRYs up your page meta tags.}
   s.test_files = [
     "spec/meta_on_rails_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "test/meta_on_rails_test.rb"
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
