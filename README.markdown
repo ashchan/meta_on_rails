@@ -1,11 +1,13 @@
 MetaOnRails
 ===========
-MetaOnRails DRYs up your page meta tags.  
+MetaOnRails DRYs up your page meta tags.
 It is a very simple Rails plugin to help you customize your pages' meta tags a little bit easier.
 
 Install
 =======
-    script/plugin install git://github.com/ashchan/meta_on_rails.git
+Add this to your Gemfile:
+
+    gem "meta_on_rails"
 
 Example
 =======
@@ -30,10 +32,7 @@ The output html will be like this:
     <meta name="description" content="default description" />
     <meta name="keywords" content="my,keyword" />
 
-Bugs?
-=====
-[Lighthouse](http://ashchan.lighthouseapp.com/projects/13347-meta-on-rails/overview)
 
 Author
 ======
-Copyright (c) 2008 James Chan (ashchan), released under the MIT license
+Copyright (c) 2008 - 2011 James Chen ([@ashchan](http://twitter.com/ashchan)), released under the MIT license
